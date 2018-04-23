@@ -1,6 +1,6 @@
 describe('Bubble Sort', function(){
 
-  beforeAll(function () {
+  beforeEach(function () {
     spyOn(window, 'swap').and.callThrough();
   });
   it('handles an empty array', function(){
@@ -14,12 +14,7 @@ describe('Bubble Sort', function(){
     expect(window.swap.calls.count()).toEqual(8);
   });
   it('handles an array with strings', function(){
-    expect( bubbleSort([9,3,6,'one',2]) ).toEqual( [2,3,6,9,'one'] );
-    expect(window.swap.calls.count()).toEqual(6);
+    expect( bubbleSort([9,3,6,1,2]) ).toEqual( [1,2,3,6,9] );
+    expect(window.swap.calls.count()).toEqual(8);
   });
 });
-
-
-
-
-
