@@ -2,7 +2,6 @@ function swap(array, i, j) {
   let swapping = array[i]
   array[i] = array[j];
   array[j] = swapping;
-  console.log('hello');
   return array;
 }
 
